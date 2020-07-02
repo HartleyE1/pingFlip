@@ -9,3 +9,14 @@ function getRandomImage(imgAr, path) {
     document.getElementById('image').src = imgStr;
 }
 
+function uploadImages() {
+
+let photo = document.getElementById("image-file").files[0];  // file from input
+let req = new XMLHttpRequest();
+let formData = new FormData();
+
+formData.append("photo", photo);                                
+req.open("POST", '/images/image');
+req.send(formData);
+
+}

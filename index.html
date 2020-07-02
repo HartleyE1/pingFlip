@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <title>Demo</title>
 
-<script type="text/javascript">
+<script type="text/javascript" src="script.js">
 
 </script>
 </head>
@@ -21,6 +21,10 @@
 
 <p>&nbsp;</p>
 
+<form enctype="multipart/form-data" action="image" method="post">
+    <input id="image-file" type="file" />
+    <input type="button" onclick="uploadImages()"/>
+</form>
 
 </body>
 </html>
